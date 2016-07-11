@@ -13,10 +13,11 @@
 		'ngAnimate',
 		'md.data.table',
 		'ngFileUpload',
-		'angular.filter'
+		'angular.filter',
+		'ngResource'
 	])
 	
-	.constant('api', 'http://localhost/mvred/server/public/api/')
+	.constant('api', 'http://localhost/dasedaNuevo/public/api/')
 	// .constant('api', 'http://api.medicavial.mx/api/')
 
 	.constant('publicfiles','http://localhost/mvred/server/public/exports/');

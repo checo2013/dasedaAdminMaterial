@@ -1,0 +1,22 @@
+/* Animacion para el spalsh screen */
+.splash {
+    background: #fff url(../img/splash.jpg) no-repeat center center fixed;
+  	background-size: cover;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    overflow: hidden;
+    perspective: 1000px;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+}
+ 
+.splash-open.splash {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}

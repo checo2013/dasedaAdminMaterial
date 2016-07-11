@@ -15,8 +15,8 @@
 
 		sesion.inicio = function(){
 			sesion.datos = {
-				usuario:'',
-				psw:'',
+				username:'',
+				password:'',
 				guardar:false
 			}
 		}

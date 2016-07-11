@@ -17,13 +17,12 @@
                     // console.log(data);
                     $rootScope.cargando = false;
 
-                    webStorage.session.add('username',data.Usu_login);
-                    webStorage.session.add('nombre',data.Usu_nombre);
-                    webStorage.session.add('id',data.Usu_login);
-
-                    $rootScope.username = webStorage.session.get('username');
-                    $rootScope.nombre = webStorage.session.get('nombre');
-                    $rootScope.id = webStorage.session.get('id');
+                    webStorage.session.add('id',data.id);
+                    webStorage.session.add('user',data.username);
+                    webStorage.session.add('name',data.name);
+                    webStorage.session.add('email',data.email);
+                    webStorage.session.add('skill',data.skill);
+                    webStorage.session.add('SSID',data.remember_token);
 
                     if (credenciales.guardar) {
                         webStorage.local.add('usuario',JSON.stringify(data));

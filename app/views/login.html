@@ -15,7 +15,7 @@
 					<md-icon  class="name">
 						<ng-md-icon icon="person" style="fill:#595959"></ng-md-icon> 
 					</md-icon>
-					<input ng-model="sesion.datos.usuario" name="usuario" type="text" aria-label="usuario" required>
+					<input ng-model="sesion.datos.username" name="usuario" type="text" aria-label="usuario" required>
 					<div ng-messages="sesion.loginForm.usuario.$error" ng-if="sesion.loginForm.$submitted">
 						<div ng-message="required">Campo obligatorio.</div>
 			        </div>
@@ -25,7 +25,7 @@
 					<md-icon  class="psw">
 						<ng-md-icon icon="lock" style="fill:#595959"></ng-md-icon> 
 					</md-icon>
-					<input ng-model="sesion.datos.psw" name="psw" type="password" aria-label="contraseña" required>
+					<input ng-model="sesion.datos.password" name="psw" type="password" aria-label="contraseña" required>
 					<div ng-messages="sesion.loginForm.psw.$error" ng-if="sesion.loginForm.$submitted">
 						<div ng-message="required">Campo obligatorio.</div>
 			        </div>

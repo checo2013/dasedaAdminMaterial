@@ -15,8 +15,8 @@
 		$rootScope.atras = false;
 
 		//parametros globales tomados del localStorage
-		$rootScope.username = webStorage.session.get('username');
-		$rootScope.nombre = webStorage.session.get('nombre');
+		$rootScope.username = webStorage.session.get('user');
+		$rootScope.nombre = webStorage.session.get('name');
 		$rootScope.id = webStorage.session.get('id');
 
 
@@ -53,13 +53,13 @@
 	        $rootScope.atras = false;
 
 	        url = toState.name;
-		    if(url !== 'login' && webStorage.session.get('username') === null)
+		    if(url !== 'login' && webStorage.session.get('user') === null)
 	        {   
 	        	event.preventDefault();
 	            $state.go('login');
 	        }
 	        //en el caso de que intente acceder al login y ya haya iniciado sesión lo mandamos a la home
-	        if(url === 'login' && webStorage.session.get('username') !== null)
+	        if(url === 'login' && webStorage.session.get('user') !== null)
 	        {
 	        	event.preventDefault();
 	            $state.go('index.home');
