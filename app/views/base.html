@@ -69,57 +69,20 @@
             <md-icon>
               <ng-md-icon icon="assignment"></ng-md-icon>
             </md-icon>
+            <p> Marcas </p>
+          </md-list-item>
+
+          <md-divider></md-divider>
+
+          <md-list-item ng-click="ir('index.registro')">
+            <md-icon>
+              <ng-md-icon icon="assignment"></ng-md-icon>
+            </md-icon>
             <p> Productos </p>
           </md-list-item>
 
-          <!-- <md-list-item ng-click="abrirMenu(1)">
-            <md-icon>
-              <ng-md-icon icon="dashboard" style="fill:rgb(255, 87, 34)"></ng-md-icon>
-            </md-icon>
-            <p> Registro de Paciente </p>
-            <md-icon>
-              <ng-md-icon icon="{{iconoAdmin}}" options='{"duration": 375,"rotation": "none"}'></ng-md-icon>
-            </md-icon>
-          </md-list-item>
-          <div ng-if="admin" class="sub-menu">
-            <md-list-item ng-click="ir('index.usuarios')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> Usuarios </p>
-            </md-list-item>
-            <md-list-item ng-click="ir('index.perfiles')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> Perfiles </p>
-            </md-list-item>
-            <md-list-item ng-click="ir('index.tiposmovimiento')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> Tipos Movimiento </p>
-            </md-list-item>
-            <md-list-item ng-click="ir('index.tiposajuste')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> Tipos Ajuste </p>
-            </md-list-item>
-            <md-list-item ng-click="ir('index.tiposorden')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> Tipos Orden </p>
-            </md-list-item>
-            <md-list-item ng-click="ir('index.subtipositem')">
-              <md-icon>
-                <ng-md-icon icon="keyboard_arrow_right" style="fill:rgb(255, 87, 34)"></ng-md-icon> 
-              </md-icon>
-              <p> SubTipos item </p>
-            </md-list-item>
-          
-          </div> -->
+
+
 
 
         </md-list>
@@ -137,28 +100,12 @@
           </md-button>
           <h1>{{ titulo }}</h1>
           <span flex></span>
-          <md-button class="md-icon-button" aria-label="Notificaciones">
-              <ng-md-icon icon="notifications" style="fill:white"></ng-md-icon> 
+          <md-button class="md-icon-button" aria-label="Salir" ng-click="logout()">
+              <ng-md-icon icon="logout" style="fill:white"></ng-md-icon>
+              <md-tooltip md-direction="bottom">
+                Cerrar Sesión
+              </md-tooltip> 
           </md-button>
-          <md-menu md-position-mode="target-right target">
-            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-              <ng-md-icon md-menu-origin icon="more_vert" style="fill:white"></ng-md-icon> 
-            </md-button>
-            <md-menu-content width="3" >
-              <md-menu-item>
-                <md-button ng-click="ir('index.configuraciones')">
-                    <ng-md-icon icon="settings" style="fill:gray"></ng-md-icon>
-                    Configuración
-                </md-button>
-              </md-menu-item>
-              <md-menu-item>
-                <md-button ng-click="logout()">
-                    <ng-md-icon icon="logout" style="fill:gray"></ng-md-icon>
-                    Salir
-                </md-button>
-              </md-menu-item>
-            </md-menu-content>
-          </md-menu>
         </div>
       </md-toolbar>
       <ui-view ng-if="!cargando" class="padding-views paginas"></ui-view>
